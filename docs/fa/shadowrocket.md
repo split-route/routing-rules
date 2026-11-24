@@ -9,7 +9,7 @@ icon: material/rocket-launch-outline
 روی آیفون یا آیپدی که Shadowrocket روی آن نصب است، روی دکمه بزنید. Shadowrocket باز می‌شود، کانفیگ را
 دانلود می‌کند و به آن تغییر می‌دهد.
 
-[:material-rocket-launch: نصب در Shadowrocket](shadowrocket://config/add/https://github.com/aliraghebi/routing-rules/releases/latest/download/shadowrocket.conf){ .md-button .md-button--primary }
+[:material-rocket-launch: نصب در Shadowrocket](shadowrocket://config/add/https://github.com/split-route/routing-rules/releases/latest/download/shadowrocket.conf){ .md-button .md-button--primary }
 
 سپس در تب **Home** سرور خود را اضافه کنید و **Global Routing** را روی **Config** بگذارید.
 
@@ -23,7 +23,7 @@ icon: material/rocket-launch-outline
 1. لینک کانفیگ را کپی کنید:
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/shadowrocket.conf
+    https://github.com/split-route/routing-rules/releases/latest/download/shadowrocket.conf
     ```
 
 2. Shadowrocket ←‏ تب **Config** ←‏ **+** ←‏ لینک را پیست کنید ←‏ **Download**.
@@ -48,14 +48,14 @@ icon: material/rocket-launch-outline
 قوانین را به‌صورت **ماژول** اضافه کنید. ماژول همان قوانین را بدون قانون پایانی دارد، پس کانفیگ شما سرورها و
 `FINAL` خودش را نگه می‌دارد.
 
-[:material-puzzle-outline: نصب ماژول در Shadowrocket](shadowrocket://install?module=https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule){ .md-button }
+[:material-puzzle-outline: نصب ماژول در Shadowrocket](shadowrocket://install?module=https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule){ .md-button }
 
 یا آن را دستی اضافه کنید:
 
 1. لینک ماژول را کپی کنید:
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule
+    https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule
     ```
 
 2. Shadowrocket ←‏ تب **Config** ←‏ **Modules** ←‏ **+** ←‏ لینک را پیست کنید ←‏ **Download**.
@@ -84,8 +84,8 @@ icon: material/rocket-launch-outline
 `FINAL` اضافه کنید. برای مثال:
 
 ```
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/nsfw.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/telegram.list,PROXY
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/nsfw.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/telegram.list,PROXY
 ```
 
 !!! warning "توجه"
@@ -100,7 +100,7 @@ iOS حافظه برنامه‌های VPN را محدود می‌کند و `ads.l
 
 - **DOMAIN-SET**: همان دامنه‌ها در قالبی که Shadowrocket و Surge بهینه‌تر لود می‌کنند. خط `RULE-SET`
   یک لیست دامنه را با خط `DOMAIN-SET` جایگزین کنید، مثلاً
-  `DOMAIN-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads-domainset.txt,REJECT`. فایل‌های DOMAIN-SET فقط دامنه دارند، پس برای لیست‌هایی که
+  `DOMAIN-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads-domainset.txt,REJECT`. فایل‌های DOMAIN-SET فقط دامنه دارند، پس برای لیست‌هایی که
   بازه IP هم دارند (`malware`، `phishing`) همان `RULE-SET` را نگه دارید.
 - **ads-lite**: حدود ۵ هزار قانون از منابع کوچک و دست‌چین‌شده (شبکه‌های تبلیغاتی و ردیاب‌های ایرانی، لیست
   Peter Lowe، v2fly) به‌جای حدود ۱۷۶ هزار. به‌جای `ads.list` از `ads-lite.list` (یا `ads-lite-domainset.txt`)

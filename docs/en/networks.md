@@ -17,7 +17,7 @@ the VPN. Paste the file's content after `AllowedIPs =` in the `[Peer]` section.
 | `wireguard-allowedips.txt` | ~16k, IPv4 and IPv6 | Desktop clients |
 | `wireguard-allowedips-lite.txt` | ~1.7k IPv4, plus `::/0` | Phones. Excludes only Iranian blocks of `/20` or larger (about 90% of Iranian IPv4 addresses) and sends all IPv6 through the tunnel. |
 
-[:material-download: Download wireguard-allowedips-lite.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/wireguard-allowedips-lite.txt){ .md-button .md-button--primary } [:material-download: Download wireguard-allowedips.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/wireguard-allowedips.txt){ .md-button }
+[:material-download: Download wireguard-allowedips-lite.txt](https://github.com/split-route/routing-rules/releases/latest/download/wireguard-allowedips-lite.txt){ .md-button .md-button--primary } [:material-download: Download wireguard-allowedips.txt](https://github.com/split-route/routing-rules/releases/latest/download/wireguard-allowedips.txt){ .md-button }
 
 !!! warning "DNS"
     Split tunneling by IP doesn't decide where DNS goes. Set the WireGuard `DNS =` to a resolver inside the
@@ -41,7 +41,7 @@ changes.
 | `openvpn-ir-routes.txt` | ~2k, IPv4 | Desktop clients |
 | `openvpn-ir-routes-lite.txt` | ~350, IPv4 | Phones and routers. Only Iranian blocks of `/20` or larger (about 90% of Iranian IPv4 addresses). |
 
-[:material-download: Download openvpn-ir-routes-lite.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/openvpn-ir-routes-lite.txt){ .md-button .md-button--primary } [:material-download: Download openvpn-ir-routes.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/openvpn-ir-routes.txt){ .md-button }
+[:material-download: Download openvpn-ir-routes-lite.txt](https://github.com/split-route/routing-rules/releases/latest/download/openvpn-ir-routes-lite.txt){ .md-button .md-button--primary } [:material-download: Download openvpn-ir-routes.txt](https://github.com/split-route/routing-rules/releases/latest/download/openvpn-ir-routes.txt){ .md-button }
 
 !!! note
     The routes are IPv4 only, so IPv6 stays in the tunnel. `net_gateway` is standard OpenVPN 2.x syntax
@@ -52,10 +52,10 @@ changes.
 
 `mikrotik-ir.rsc` creates the address list `IR` (IPv4 and IPv6). Running it again replaces the list.
 
-[:material-download: Download mikrotik-ir.rsc](https://github.com/aliraghebi/routing-rules/releases/latest/download/mikrotik-ir.rsc){ .md-button .md-button--primary }
+[:material-download: Download mikrotik-ir.rsc](https://github.com/split-route/routing-rules/releases/latest/download/mikrotik-ir.rsc){ .md-button .md-button--primary }
 
 ```
-/tool fetch url="https://github.com/aliraghebi/routing-rules/releases/latest/download/mikrotik-ir.rsc" dst-path=mikrotik-ir.rsc
+/tool fetch url="https://github.com/split-route/routing-rules/releases/latest/download/mikrotik-ir.rsc" dst-path=mikrotik-ir.rsc
 /import file-name=mikrotik-ir.rsc
 ```
 
@@ -68,12 +68,12 @@ Then use `dst-address-list=IR` in your mangle or routing rules, for example to m
 
 ```sh
 ipset create ir hash:net
-curl -sL https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr4.txt | while read -r n; do ipset add ir "$n"; done
+curl -sL https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr4.txt | while read -r n; do ipset add ir "$n"; done
 ```
 
 ```sh
 nft add set inet fw4 ir '{ type ipv4_addr; flags interval; }'
-nft add element inet fw4 ir "{ $(curl -sL https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr4.txt | paste -sd, -) }"
+nft add element inet fw4 ir "{ $(curl -sL https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr4.txt | paste -sd, -) }"
 ```
 
 Apps on OpenWrt that use v2ray/Xray (PassWall, ShadowSocksR Plus+) can use `geosite.dat` / `geoip.dat`

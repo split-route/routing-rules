@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Check the domain first with [Check a domain](https://aliraghebi.github.io/routing-rules/check/) to see which list blocks it.
+        Check the domain first with [Check a domain](https://split-route.github.io/routing-rules/check/) to see which list blocks it.
   - type: input
     id: domain
     attributes:

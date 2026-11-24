@@ -11,7 +11,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 var kindPrefix = [...]string{parse.Suffix: "DOMAIN-SUFFIX", parse.Exact: "DOMAIN", parse.Keyword: "DOMAIN-KEYWORD"}

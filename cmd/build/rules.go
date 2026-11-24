@@ -11,9 +11,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/aliraghebi/routing-rules/internal/emit"
-	"github.com/aliraghebi/routing-rules/internal/merge"
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/emit"
+	"github.com/split-route/routing-rules/internal/merge"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 // dnsBlocklist marks optional categories that also make sense as DNS blocklists.

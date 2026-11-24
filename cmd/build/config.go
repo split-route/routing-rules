@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 type Config struct {

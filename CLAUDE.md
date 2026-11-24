@@ -27,7 +27,7 @@ Rules:
 - Rule order is the contract: early REJECT (DNS block pages) → private DIRECT → REJECT → PROXY → Iran DIRECT → final PROXY. Every client format must keep the same order; `ruleOrder` in `cmd/build/rules.go` is the single source.
 - Outputs must be byte-deterministic (sorted, no timestamps). A release is published only when checksums change, so non-determinism means a release every day.
 - Safety checks run before anything is written: no empty lists, allowlist, canaries. A failing source falls back to its last good copy; never weaken these checks to make a build pass.
-- Outputs are never committed to `main`.
+- Outputs are never committed to `main`. The release set plus every upstream geosite/geoip `.srs` (`rule-set-geosite/`, `rule-set-geoip/`, from SagerNet) and the full v2fly `.dat` files (`v2ray/`) is force-pushed as one orphan commit to the `release` branch (`scripts/publish-branch.sh`, only when its `SHA256SUMS` changes; a failed upstream fetch leaves the branch alone); that bot-only branch is the one force-push exception. Releases keep their current file set and stay under GitHub's 1000-asset cap: large generated sets go to `release` only. The app's default base URL is the branch's raw address, so root files there must keep the release's flat names.
 
 ### Adding a client format
 
@@ -59,7 +59,7 @@ mkdocs build --strict              # docs; deps pinned in requirements-docs.txt 
 
 ## Docs
 
-- `splitroute` lives in its own repo ([aliraghebi/splitroute](https://github.com/aliraghebi/splitroute)); only its docs page (`splitroute.md`) is here.
+- `splitroute` lives in its own repo ([split-route/splitroute](https://github.com/split-route/splitroute)); only its docs page (`splitroute.md`) is here.
 
 - Every page change goes into both `docs/en` and `docs/fa`. English is the source; Persian is rewritten naturally, not translated word by word.
 - `mkdocs build --strict` must pass; anchors referenced from other pages must stay stable (use `{#id}` on Persian headings that are linked).

@@ -12,13 +12,13 @@ Set these as the custom geo file URLs in your app:
 `geosite.dat`
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite.dat
+https://github.com/split-route/routing-rules/releases/latest/download/geosite.dat
 ```
 
 `geoip.dat`
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip.dat
+https://github.com/split-route/routing-rules/releases/latest/download/geoip.dat
 ```
 
 Opening these URLs in a browser downloads the files.
@@ -43,7 +43,7 @@ Opening these URLs in a browser downloads the files.
 
 `xray-routing.json` follows the same order as the Shadowrocket config:
 
-[:material-download: Download xray-routing.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/xray-routing.json){ .md-button .md-button--primary }
+[:material-download: Download xray-routing.json](https://github.com/split-route/routing-rules/releases/latest/download/xray-routing.json){ .md-button .md-button--primary }
 
 ```json
 {
@@ -73,7 +73,7 @@ no domain rule matched, so `geoip:ir` also catches Iranian sites missing from `g
 `xray-dns.json` is a `dns` block: Iranian domains (`geosite:ir`) use the system resolver, everything else
 DNS-over-HTTPS (`https://1.1.1.1/dns-query`), which the routing above sends through the proxy.
 
-[:material-download: Download xray-dns.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/xray-dns.json){ .md-button .md-button--primary }
+[:material-download: Download xray-dns.json](https://github.com/split-route/routing-rules/releases/latest/download/xray-dns.json){ .md-button .md-button--primary }
 
 ## v2rayN / v2rayNG
 

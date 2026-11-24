@@ -12,11 +12,11 @@
 # url:     {YYYY-MM} is replaced by the current UTC month (previous month as fallback).
 
 settings:
-  user_agent: "routing-rules-builder/1.0 (+https://github.com/aliraghebi/routing-rules)"
-  repo_url: https://github.com/aliraghebi/routing-rules
+  user_agent: "routing-rules-builder/1.0 (+https://github.com/split-route/routing-rules)"
+  repo_url: https://github.com/split-route/routing-rules
   # Rule-set URLs written into the configs. Files are published as assets of the latest
   # GitHub release; this URL always redirects to the newest copy.
-  base_url: https://github.com/aliraghebi/routing-rules/releases/latest/download
+  base_url: https://github.com/split-route/routing-rules/releases/latest/download
   timeout: 90s
   concurrency: 16
   retries: 3

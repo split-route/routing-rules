@@ -15,7 +15,7 @@ Shadowrocket, Karing, WireGuard, OpenVPN, browsers and DNS filters.
 
 [:material-rocket-launch-outline: Get started](#pick-your-client){ .md-button .md-button--primary }
 [:material-magnify: Check a domain](check.md){ .md-button }
-[:material-download: Latest release](https://github.com/aliraghebi/routing-rules/releases/latest){ .md-button }
+[:material-download: Latest release](https://github.com/split-route/routing-rules/releases/latest){ .md-button }
 
 </div>
 
@@ -184,11 +184,11 @@ Every file and its URL: [File URLs](urls.md). Where the data comes from: [Source
 
 ## Where the files are hosted
 
-Every file is published as an asset of the latest [GitHub release](https://github.com/aliraghebi/routing-rules/releases/latest),
+Every file is published as an asset of the latest [GitHub release](https://github.com/split-route/routing-rules/releases/latest),
 rebuilt whenever an upstream list changes:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/<file>
+https://github.com/split-route/routing-rules/releases/latest/download/<file>
 ```
 
 This URL always points to the newest version. It redirects to GitHub's download servers

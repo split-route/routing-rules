@@ -6,7 +6,7 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 // WireGuardAllowedIPs renders a comma-separated AllowedIPs value: every
@@ -70,7 +70,7 @@ func DomainSet(domains []parse.Domain) []byte {
 // widened to their subdomains, as DNS blocklists usually are.
 func AdGuard(title string, domains []parse.Domain) []byte {
 	var b bytes.Buffer
-	fmt.Fprintf(&b, "! Title: routing-rules %s\n! Homepage: https://github.com/aliraghebi/routing-rules\n", title)
+	fmt.Fprintf(&b, "! Title: routing-rules %s\n! Homepage: https://github.com/split-route/routing-rules\n", title)
 	for _, d := range domains {
 		if d.Kind != parse.Keyword {
 			b.WriteString("||" + d.Name + "^\n")

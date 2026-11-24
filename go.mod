@@ -1,4 +1,4 @@
-module github.com/aliraghebi/routing-rules
+module github.com/split-route/routing-rules
 
 go 1.26.0
 

@@ -17,7 +17,7 @@ The block lists are also published as DNS blocklists, for your own DNS filter at
 **Filters → DNS blocklists → Add blocklist → Add a custom list**, then paste:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-default.txt
+https://github.com/split-route/routing-rules/releases/latest/download/adguard-default.txt
 ```
 
 ## Pi-hole
@@ -27,13 +27,13 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-def
 === "Pi-hole v6"
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-default.txt
+    https://github.com/split-route/routing-rules/releases/latest/download/adguard-default.txt
     ```
 
 === "Pi-hole v5"
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/hosts-default.txt
+    https://github.com/split-route/routing-rules/releases/latest/download/hosts-default.txt
     ```
 
 !!! note

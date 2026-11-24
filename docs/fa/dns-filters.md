@@ -18,7 +18,7 @@ icon: material/shield-search
 **Filters ←‏ DNS blocklists ←‏ Add blocklist ←‏ Add a custom list** و سپس این را پیست کنید:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-default.txt
+https://github.com/split-route/routing-rules/releases/latest/download/adguard-default.txt
 ```
 
 ## Pi-hole
@@ -28,13 +28,13 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-def
 === "Pi-hole v6"
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/adguard-default.txt
+    https://github.com/split-route/routing-rules/releases/latest/download/adguard-default.txt
     ```
 
 === "Pi-hole v5"
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/hosts-default.txt
+    https://github.com/split-route/routing-rules/releases/latest/download/hosts-default.txt
     ```
 
 !!! note "نکته"

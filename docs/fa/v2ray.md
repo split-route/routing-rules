@@ -12,13 +12,13 @@ icon: material/alpha-x-circle-outline
 `geosite.dat`
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite.dat
+https://github.com/split-route/routing-rules/releases/latest/download/geosite.dat
 ```
 
 `geoip.dat`
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip.dat
+https://github.com/split-route/routing-rules/releases/latest/download/geoip.dat
 ```
 
 باز کردن این لینک‌ها در مرورگر، فایل‌ها را دانلود می‌کند.
@@ -43,7 +43,7 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip.dat
 
 `xray-routing.json` همان ترتیب کانفیگ Shadowrocket را دارد:
 
-[:material-download: دانلود xray-routing.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/xray-routing.json){ .md-button .md-button--primary }
+[:material-download: دانلود xray-routing.json](https://github.com/split-route/routing-rules/releases/latest/download/xray-routing.json){ .md-button .md-button--primary }
 
 ```json
 {
@@ -74,7 +74,7 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip.dat
 `xray-dns.json` یک بلوک `dns` است: دامنه‌های ایرانی (`geosite:ir`) از DNS سیستم و بقیه از DNS-over-HTTPS
 (`https://1.1.1.1/dns-query`) استفاده می‌کنند که مسیریابی بالا آن را از پراکسی عبور می‌دهد.
 
-[:material-download: دانلود xray-dns.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/xray-dns.json){ .md-button .md-button--primary }
+[:material-download: دانلود xray-dns.json](https://github.com/split-route/routing-rules/releases/latest/download/xray-dns.json){ .md-button .md-button--primary }
 
 ## v2rayN / v2rayNG
 

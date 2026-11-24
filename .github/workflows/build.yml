@@ -125,7 +125,7 @@ jobs:
       # .../releases/latest/download/<file> switches to the new set at once and
       # never serves a half-uploaded release. Older releases are deleted.
       # Signed build provenance for every release file: verify one with
-      # `gh attestation verify <file> --repo aliraghebi/routing-rules`.
+      # `gh attestation verify <file> --repo split-route/routing-rules`.
       - name: Attest release files
         if: steps.assemble.outputs.changed == 'true' && github.event_name != 'pull_request'
         uses: actions/attest-build-provenance@v2
@@ -137,6 +137,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: scripts/publish.sh "$RUNNER_TEMP/prev"
+
+      # The release set plus every upstream geosite and geoip rule-set, on one force-pushed commit.
+      - name: Publish release branch
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/publish-branch.sh
 
       - uses: actions/setup-python@v5
         with:

@@ -8,14 +8,14 @@ icon: material/web
 دامنه‌های ایرانی (از جمله همه دامنه‌های `.ir`) را مستقیم و بقیه را از طریق پراکسی محلی کلاینت شما (v2rayN،
 Clash، sing-box و مشابه) می‌فرستد.
 
-[:material-download: دانلود proxy.pac](https://github.com/aliraghebi/routing-rules/releases/latest/download/proxy.pac){ .md-button .md-button--primary }
+[:material-download: دانلود proxy.pac](https://github.com/split-route/routing-rules/releases/latest/download/proxy.pac){ .md-button .md-button--primary }
 
 ## لینک PAC {#pac-url}
 
 macOS، Windows و Firefox **لینک** فایل PAC را می‌گیرند. این لینک را کپی کنید:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/proxy.pac
+https://github.com/split-route/routing-rules/releases/latest/download/proxy.pac
 ```
 
 این لینک همیشه جدیدترین فایل را می‌دهد، پس لیست‌ها بدون دانلود دوباره آپدیت می‌مانند. از آدرس پراکسی پیش‌فرض

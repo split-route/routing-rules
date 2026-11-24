@@ -16,7 +16,7 @@ Surge و Loon همان قالب لیست `RULE-SET` مربوط به Shadowrocket
 سریع‌ترین راه، ماژول است که همه قوانین زیر را روی کانفیگ شما اضافه می‌کند:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule
+https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule
 ```
 
 آن را از **Modules** ←‏ **Install New Module** با همین لینک نصب کنید. قوانین، سایت‌هایی را که IP ایران را
@@ -26,15 +26,15 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rul
 برای افزودن دستی قوانین، این خطوط را در بخش `[Rule]`، بالای `FINAL`، اضافه کنید:
 
 ```
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-injected.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/malware.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/phishing.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/cryptominers.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/sanctioned.list,PROXY
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-injected.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/malware.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/phishing.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/cryptominers.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/sanctioned.list,PROXY
 DOMAIN-SUFFIX,ir,DIRECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-domains.list,DIRECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-domains.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr.list,DIRECT
 GEOIP,IR,DIRECT
 FINAL,PROXY
 ```
@@ -46,14 +46,14 @@ FINAL,PROXY
 این خطوط را در بخش `[Remote Rule]` اضافه کنید:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-injected.list, policy=REJECT, tag=ir-injected, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/malware.list, policy=REJECT, tag=malware, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/phishing.list, policy=REJECT, tag=phishing, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/cryptominers.list, policy=REJECT, tag=cryptominers, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ads.list, policy=REJECT, tag=ads, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/sanctioned.list, policy=PROXY, tag=sanctioned, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-domains.list, policy=DIRECT, tag=ir-domains, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr.list, policy=DIRECT, tag=ir-cidr, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-injected.list, policy=REJECT, tag=ir-injected, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/malware.list, policy=REJECT, tag=malware, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/phishing.list, policy=REJECT, tag=phishing, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/cryptominers.list, policy=REJECT, tag=cryptominers, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ads.list, policy=REJECT, tag=ads, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/sanctioned.list, policy=PROXY, tag=sanctioned, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-domains.list, policy=DIRECT, tag=ir-domains, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr.list, policy=DIRECT, tag=ir-cidr, enabled=true
 ```
 
 سپس `DOMAIN-SUFFIX,ir,DIRECT` و `GEOIP,IR,DIRECT` را در `[Rule]` اضافه کنید و `FINAL` را روی policy پراکسی
@@ -64,7 +64,7 @@ https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr.lis
 Surge می‌تواند لیست‌های دامنه را به شکل `DOMAIN-SET` لود کند که حافظه کمتری از `RULE-SET` مصرف می‌کند:
 
 ```
-DOMAIN-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads-domainset.txt,REJECT
+DOMAIN-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads-domainset.txt,REJECT
 ```
 
 هر لیست دامنه یک نسخه `-domainset.txt` دارد؛ ببینید [لینک فایل‌ها](urls.md#surge-shadowrocket-domain-set).

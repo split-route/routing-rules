@@ -16,7 +16,7 @@ hide:
 
 [:material-rocket-launch-outline: شروع کنید](#pick-your-client){ .md-button .md-button--primary }
 [:material-magnify: بررسی دامنه](check.md){ .md-button }
-[:material-download: آخرین نسخه](https://github.com/aliraghebi/routing-rules/releases/latest){ .md-button }
+[:material-download: آخرین نسخه](https://github.com/split-route/routing-rules/releases/latest){ .md-button }
 
 </div>
 
@@ -185,11 +185,11 @@ flowchart LR
 
 ## فایل‌ها کجا منتشر می‌شوند
 
-هر فایل به‌عنوان بخشی از [آخرین نسخه گیت‌هاب](https://github.com/aliraghebi/routing-rules/releases/latest)
+هر فایل به‌عنوان بخشی از [آخرین نسخه گیت‌هاب](https://github.com/split-route/routing-rules/releases/latest)
 منتشر می‌شود و هر بار که یکی از لیست‌های منبع تغییر کند دوباره ساخته می‌شود:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/<file>
+https://github.com/split-route/routing-rules/releases/latest/download/<file>
 ```
 
 این لینک همیشه به جدیدترین نسخه اشاره می‌کند. گیت‌هاب آن را به سرورهای دانلود خود

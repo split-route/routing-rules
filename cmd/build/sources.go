@@ -18,8 +18,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aliraghebi/routing-rules/internal/fetch"
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/fetch"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 type outcome struct {

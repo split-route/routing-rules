@@ -17,7 +17,7 @@ WireGuard مقصدی را که با `AllowedIPs` تطبیق پیدا کند از
 | `wireguard-allowedips.txt` | حدود ۱۶ هزار، IPv4 و IPv6 | کلاینت‌های دسکتاپ |
 | `wireguard-allowedips-lite.txt` | حدود ۱٫۷ هزار IPv4، به‌علاوه `::/0` | گوشی‌ها. فقط بلوک‌های ایرانی `/20` یا بزرگ‌تر را مستثنا می‌کند (حدود ۹۰٪ آدرس‌های IPv4 ایران) و همه IPv6 را از تونل عبور می‌دهد. |
 
-[:material-download: دانلود wireguard-allowedips-lite.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/wireguard-allowedips-lite.txt){ .md-button .md-button--primary } [:material-download: دانلود wireguard-allowedips.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/wireguard-allowedips.txt){ .md-button }
+[:material-download: دانلود wireguard-allowedips-lite.txt](https://github.com/split-route/routing-rules/releases/latest/download/wireguard-allowedips-lite.txt){ .md-button .md-button--primary } [:material-download: دانلود wireguard-allowedips.txt](https://github.com/split-route/routing-rules/releases/latest/download/wireguard-allowedips.txt){ .md-button }
 
 !!! warning "DNS"
     تونل جداشده بر اساس IP تعیین نمی‌کند DNS کجا برود. `DNS =` در WireGuard را روی یک سرور DNS داخل تونل
@@ -40,7 +40,7 @@ route 2.144.0.0 255.252.0.0 net_gateway
 | `openvpn-ir-routes.txt` | حدود ۲ هزار، IPv4 | کلاینت‌های دسکتاپ |
 | `openvpn-ir-routes-lite.txt` | حدود ۳۵۰، IPv4 | گوشی‌ها و روترها. فقط بلوک‌های ایرانی `/20` یا بزرگ‌تر (حدود ۹۰٪ آدرس‌های IPv4 ایران). |
 
-[:material-download: دانلود openvpn-ir-routes-lite.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/openvpn-ir-routes-lite.txt){ .md-button .md-button--primary } [:material-download: دانلود openvpn-ir-routes.txt](https://github.com/aliraghebi/routing-rules/releases/latest/download/openvpn-ir-routes.txt){ .md-button }
+[:material-download: دانلود openvpn-ir-routes-lite.txt](https://github.com/split-route/routing-rules/releases/latest/download/openvpn-ir-routes-lite.txt){ .md-button .md-button--primary } [:material-download: دانلود openvpn-ir-routes.txt](https://github.com/split-route/routing-rules/releases/latest/download/openvpn-ir-routes.txt){ .md-button }
 
 !!! note "نکته"
     مسیرها فقط IPv4 هستند، پس IPv6 در تونل می‌ماند. `net_gateway` نحو استاندارد OpenVPN 2.x است (دسکتاپ،
@@ -51,10 +51,10 @@ route 2.144.0.0 255.252.0.0 net_gateway
 
 `mikrotik-ir.rsc` لیست آدرس `IR` (IPv4 و IPv6) را می‌سازد. اجرای دوباره آن لیست را جایگزین می‌کند.
 
-[:material-download: دانلود mikrotik-ir.rsc](https://github.com/aliraghebi/routing-rules/releases/latest/download/mikrotik-ir.rsc){ .md-button .md-button--primary }
+[:material-download: دانلود mikrotik-ir.rsc](https://github.com/split-route/routing-rules/releases/latest/download/mikrotik-ir.rsc){ .md-button .md-button--primary }
 
 ```
-/tool fetch url="https://github.com/aliraghebi/routing-rules/releases/latest/download/mikrotik-ir.rsc" dst-path=mikrotik-ir.rsc
+/tool fetch url="https://github.com/split-route/routing-rules/releases/latest/download/mikrotik-ir.rsc" dst-path=mikrotik-ir.rsc
 /import file-name=mikrotik-ir.rsc
 ```
 
@@ -67,12 +67,12 @@ route 2.144.0.0 255.252.0.0 net_gateway
 
 ```sh
 ipset create ir hash:net
-curl -sL https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr4.txt | while read -r n; do ipset add ir "$n"; done
+curl -sL https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr4.txt | while read -r n; do ipset add ir "$n"; done
 ```
 
 ```sh
 nft add set inet fw4 ir '{ type ipv4_addr; flags interval; }'
-nft add element inet fw4 ir "{ $(curl -sL https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr4.txt | paste -sd, -) }"
+nft add element inet fw4 ir "{ $(curl -sL https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr4.txt | paste -sd, -) }"
 ```
 
 برنامه‌هایی روی OpenWrt که از v2ray/Xray استفاده می‌کنند (PassWall، ShadowSocksR Plus+) می‌توانند به‌جای این

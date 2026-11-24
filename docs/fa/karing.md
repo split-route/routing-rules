@@ -10,7 +10,7 @@ icon: material/vector-polyline
 
 ## دریافت فایل قوانین
 
-[:material-download: دانلود karing.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/karing.json){ .md-button .md-button--primary }
+[:material-download: دانلود karing.json](https://github.com/split-route/routing-rules/releases/latest/download/karing.json){ .md-button .md-button--primary }
 
 ## ایمپورت
 

@@ -13,7 +13,7 @@ are named like [Chocolate4U/Iran-sing-box-rules](https://github.com/Chocolate4U/
 
 `sing-box-route.json` is a complete `route` block, in the same order as the Shadowrocket config:
 
-[:material-download: Download sing-box-route.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/sing-box-route.json){ .md-button .md-button--primary }
+[:material-download: Download sing-box-route.json](https://github.com/split-route/routing-rules/releases/latest/download/sing-box-route.json){ .md-button .md-button--primary }
 
 Copy its `route` object into your config. It expects outbounds tagged `proxy` and `direct`. Rule-sets are
 downloaded through `proxy` (`download_detour`) and refreshed automatically.
@@ -25,7 +25,7 @@ Iranian domains (`geosite-ir`) resolve through the device's own DNS, so Iranian 
 addresses, and everything else uses DNS-over-HTTPS (`1.1.1.1`) through the proxy, so lookups are neither
 leaked nor tampered with.
 
-[:material-download: Download sing-box-dns.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/sing-box-dns.json){ .md-button .md-button--primary }
+[:material-download: Download sing-box-dns.json](https://github.com/split-route/routing-rules/releases/latest/download/sing-box-dns.json){ .md-button .md-button--primary }
 
 Merge it into your config: it adds a `dns` block and sets `route.default_domain_resolver` (required since
 sing-box 1.14) so proxy server hostnames resolve with the device's DNS. It uses the `geosite-ir` rule-set the
@@ -41,14 +41,14 @@ route defines and the `proxy` outbound.
         "tag": "geosite-ads",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite-ads.srs",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.srs",
         "download_detour": "proxy"
       },
       {
         "tag": "geosite-ir",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite-ir.srs",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ir.srs",
         "download_detour": "proxy"
       }
     ],
