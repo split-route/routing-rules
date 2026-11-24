@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/netip"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 // SingBoxVersion is the source rule-set format version, which also sets the

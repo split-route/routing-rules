@@ -20,10 +20,10 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/aliraghebi/routing-rules/internal/emit"
-	"github.com/aliraghebi/routing-rules/internal/fetch"
-	"github.com/aliraghebi/routing-rules/internal/merge"
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/emit"
+	"github.com/split-route/routing-rules/internal/fetch"
+	"github.com/split-route/routing-rules/internal/merge"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 func D(k parse.Kind, n string) parse.Domain { return parse.Domain{Kind: k, Name: n} }

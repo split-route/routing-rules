@@ -12,7 +12,7 @@ Clash Meta for Android and similar apps. The rule-sets here use mihomo's compact
 
 `clash.yaml` contains `rule-providers` and `rules` in the same order as the Shadowrocket config:
 
-[:material-download: Download clash.yaml](https://github.com/aliraghebi/routing-rules/releases/latest/download/clash.yaml){ .md-button .md-button--primary }
+[:material-download: Download clash.yaml](https://github.com/split-route/routing-rules/releases/latest/download/clash.yaml){ .md-button .md-button--primary }
 
 Merge both sections into your config. In Clash Verge Rev you can paste them into the profile's **Merge**
 (extend config) file, so your subscription stays untouched. The rules need a proxy group named **`PROXY`**;
@@ -24,7 +24,7 @@ rename it in the file if your group has a different name.
 through the system DNS (`nameserver-policy`), and DNS-over-HTTPS through the `PROXY` group for the rest.
 Merge it together with `clash.yaml`, which defines the `geosite-ir` rule-provider it uses.
 
-[:material-download: Download clash-dns.yaml](https://github.com/aliraghebi/routing-rules/releases/latest/download/clash-dns.yaml){ .md-button .md-button--primary }
+[:material-download: Download clash-dns.yaml](https://github.com/split-route/routing-rules/releases/latest/download/clash-dns.yaml){ .md-button .md-button--primary }
 
 ## Or add rule-sets yourself
 
@@ -34,14 +34,14 @@ rule-providers:
     type: http
     behavior: domain
     format: mrs
-    url: https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite-ads.mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.mrs
     path: ./rules/geosite-ads.mrs
     interval: 86400
   geoip-ir:
     type: http
     behavior: ipcidr
     format: mrs
-    url: https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip-ir.mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir.mrs
     path: ./rules/geoip-ir.mrs
     interval: 86400
 

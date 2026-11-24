@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 func TestList(t *testing.T) {

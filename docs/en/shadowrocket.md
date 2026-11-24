@@ -9,7 +9,7 @@ icon: material/rocket-launch-outline
 On your iPhone or iPad with Shadowrocket installed, tap the button. Shadowrocket opens, downloads the config
 and switches to it.
 
-[:material-rocket-launch: Install in Shadowrocket](shadowrocket://config/add/https://github.com/aliraghebi/routing-rules/releases/latest/download/shadowrocket.conf){ .md-button .md-button--primary }
+[:material-rocket-launch: Install in Shadowrocket](shadowrocket://config/add/https://github.com/split-route/routing-rules/releases/latest/download/shadowrocket.conf){ .md-button .md-button--primary }
 
 Then, on the **Home** tab, add your server and set **Global Routing** to **Config**.
 
@@ -23,7 +23,7 @@ Then, on the **Home** tab, add your server and set **Global Routing** to **Confi
 1. Copy the config URL:
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/shadowrocket.conf
+    https://github.com/split-route/routing-rules/releases/latest/download/shadowrocket.conf
     ```
 
 2. Shadowrocket → **Config** tab → **+** → paste the URL → **Download**.
@@ -48,14 +48,14 @@ If you already have a config you like (your own servers, rules or settings), add
 **module** instead of importing the config above. The module holds the same rules without the final
 catch-all, so your config keeps its servers and `FINAL`.
 
-[:material-puzzle-outline: Install module in Shadowrocket](shadowrocket://install?module=https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule){ .md-button }
+[:material-puzzle-outline: Install module in Shadowrocket](shadowrocket://install?module=https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule){ .md-button }
 
 Or add it manually:
 
 1. Copy the module URL:
 
     ```
-    https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule
+    https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule
     ```
 
 2. Shadowrocket → **Config** tab → **Modules** → **+** → paste the URL → **Download**.
@@ -84,8 +84,8 @@ Edit the config (**Config** → long-press the config → **Edit Config** → **
 example:
 
 ```
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/nsfw.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/telegram.list,PROXY
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/nsfw.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/telegram.list,PROXY
 ```
 
 !!! warning
@@ -100,7 +100,7 @@ iOS limits how much memory a VPN app may use, and `ads.list` is large. Two light
 
 - **DOMAIN-SET**: the same domains in a format Shadowrocket and Surge load more efficiently. Replace a
   domain list's `RULE-SET` line with a `DOMAIN-SET` line, e.g.
-  `DOMAIN-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads-domainset.txt,REJECT`. DOMAIN-SET files hold only domains, so keep the `RULE-SET`
+  `DOMAIN-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads-domainset.txt,REJECT`. DOMAIN-SET files hold only domains, so keep the `RULE-SET`
   lines for lists that also contain IP ranges (`malware`, `phishing`).
 - **ads-lite**: about 5k rules from small curated sources (Iranian ad networks and trackers, Peter Lowe's
   list, v2fly) instead of about 176k. Use `ads-lite.list` (or `ads-lite-domainset.txt`) in place of `ads.list`.

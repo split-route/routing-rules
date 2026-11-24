@@ -7,12 +7,12 @@ icon: material/alpha-v-circle-outline
 `v2rayn-routing.json` مجموعه‌ای از قوانین مسیریابی سفارشی در قالب JSON است که v2rayN و v2rayNG ایمپورت
 می‌کنند. از برچسب‌های `geosite:` / `geoip:` این پروژه استفاده می‌کند.
 
-[:material-download: دانلود v2rayn-routing.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/v2rayn-routing.json){ .md-button .md-button--primary }
+[:material-download: دانلود v2rayn-routing.json](https://github.com/split-route/routing-rules/releases/latest/download/v2rayn-routing.json){ .md-button .md-button--primary }
 
 برای ایمپورت با لینک، از این استفاده کنید:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/v2rayn-routing.json
+https://github.com/split-route/routing-rules/releases/latest/download/v2rayn-routing.json
 ```
 
 ## ۱. اول فایل‌های geo را نصب کنید

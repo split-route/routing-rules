@@ -29,23 +29,23 @@ VPN مثل NordVPN، OpenVPN یا WireGuard کار می‌کند، چون route 
 === "Homebrew (macOS)"
 
     ```sh
-    brew install --cask aliraghebi/tap/splitroute
+    brew install --cask split-route/tap/splitroute
     ```
 
 === "فایل آماده"
 
     فایل مناسب سیستم خود (macOS یا Linux، amd64 یا arm64) را از
-    [صفحه releaseها](https://github.com/aliraghebi/splitroute/releases) دانلود کنید و `splitroute` را در
+    [صفحه releaseها](https://github.com/split-route/splitroute/releases) دانلود کنید و `splitroute` را در
     `/usr/local/bin` کپی کنید.
 
 === "Go"
 
     ```sh
-    go install github.com/aliraghebi/splitroute@latest
+    go install github.com/split-route/splitroute@latest
     sudo cp "$(go env GOPATH)/bin/splitroute" /usr/local/bin/
     ```
 
-کد و گزارش مشکل: [github.com/aliraghebi/splitroute](https://github.com/aliraghebi/splitroute).
+کد و گزارش مشکل: [github.com/split-route/splitroute](https://github.com/split-route/splitroute).
 
 ## استفاده
 

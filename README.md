@@ -20,14 +20,14 @@ Inspired by [Chocolate4U/Iran-v2ray-rules](https://github.com/Chocolate4U/Iran-v
 | Shadowrocket, Surge, Loon | Full config, `RULE-SET` lists, `DOMAIN-SET` lists |
 | Karing, v2rayN / v2rayNG | Ready-made rule files |
 | WireGuard, OpenVPN, routers | Split-tunnel `AllowedIPs` and routes, MikroTik script, CIDR lists |
-| macOS, Linux | [`splitroute`](https://github.com/aliraghebi/splitroute): keeps Iranian IPs outside any VPN with system routes |
+| macOS, Linux | [`splitroute`](https://github.com/split-route/splitroute): keeps Iranian IPs outside any VPN with system routes |
 | Browsers | PAC file |
 | AdGuard Home, Pi-hole | DNS blocklists |
 
 ## Documentation
 
 Setup guides for each client, every file URL, and the full source list:
-**https://aliraghebi.github.io/routing-rules/**
+**https://split-route.github.io/routing-rules/**
 
 ## How it works
 
@@ -36,6 +36,12 @@ It runs safety checks before writing anything: no empty lists, the allowlist, an
 (`data/canaries.txt`). A source that fails falls back to its last good copy. Outputs are never committed to `main`. CI
 validates them with sing-box, Xray and mihomo, then publishes them as a new GitHub release, but only
 when something changed since the last one. `releases/latest/download/<file>` always serves the newest copy.
+
+The `release` branch holds the whole release set plus every upstream geosite category and geoip country as
+`.srs` (`rule-set-geosite/`, `rule-set-geoip/`, from [SagerNet/sing-geosite](https://github.com/SagerNet/sing-geosite) and
+[sing-geoip](https://github.com/SagerNet/sing-geoip)). It is one commit, force-pushed on each change (no history), with no
+size or file-count limit like a release has. `v2ray/` holds the full upstream `geosite.dat` ([v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)) and `geoip.dat` ([v2fly/geoip](https://github.com/v2fly/geoip)), checked against their published sha256 (the root `geosite.dat` and `geoip.dat` are ours): <https://raw.githubusercontent.com/split-route/routing-rules/release/SHA256SUMS>.
+The macOS app downloads its lists from there.
 
 ```sh
 go test ./...
@@ -55,7 +61,7 @@ Every release includes `SHA256SUMS`, and each file carries a signed build proven
 this repository's GitHub Actions workflow:
 
 ```sh
-gh attestation verify ads.list --repo aliraghebi/routing-rules
+gh attestation verify ads.list --repo split-route/routing-rules
 ```
 
 Tool versions used for validation (sing-box, Xray, mihomo), GitHub Actions, Go modules and the docs
@@ -70,4 +76,4 @@ GPL-3.0 (hagezi, AdGuard) and AGPL-3.0 (PersianBlocker). Attribution:
 
 - IP geolocation data: [IP Geolocation by DB-IP](https://db-ip.com) (CC BY 4.0).
 - Country IP blocks: [ipverse](https://github.com/ipverse/country-ip-blocks) (CC0), [ipdeny.com](https://www.ipdeny.com), [RIPEstat](https://stat.ripe.net).
-- Domain lists: [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains), [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community), and the other sources listed on the [sources page](https://aliraghebi.github.io/routing-rules/sources/).
+- Domain lists: [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains), [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community), and the other sources listed on the [sources page](https://split-route.github.io/routing-rules/sources/).

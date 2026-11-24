@@ -9,7 +9,7 @@ icon: material/vector-polyline
 
 ## Get the rules file
 
-[:material-download: Download karing.json](https://github.com/aliraghebi/routing-rules/releases/latest/download/karing.json){ .md-button .md-button--primary }
+[:material-download: Download karing.json](https://github.com/split-route/routing-rules/releases/latest/download/karing.json){ .md-button .md-button--primary }
 
 ## Import it
 

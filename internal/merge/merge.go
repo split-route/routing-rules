@@ -7,7 +7,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/aliraghebi/routing-rules/internal/parse"
+	"github.com/split-route/routing-rules/internal/parse"
 )
 
 // parents calls fn for name and each parent suffix ("a.b.c" -> "a.b.c", "b.c", "c").

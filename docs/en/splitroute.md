@@ -30,22 +30,22 @@ networks, wake from sleep or the VPN reconnects.
 === "Homebrew (macOS)"
 
     ```sh
-    brew install --cask aliraghebi/tap/splitroute
+    brew install --cask split-route/tap/splitroute
     ```
 
 === "Binary"
 
     Download the archive for your system (macOS or Linux, amd64 or arm64) from the
-    [releases page](https://github.com/aliraghebi/splitroute/releases) and copy `splitroute` to `/usr/local/bin`.
+    [releases page](https://github.com/split-route/splitroute/releases) and copy `splitroute` to `/usr/local/bin`.
 
 === "Go"
 
     ```sh
-    go install github.com/aliraghebi/splitroute@latest
+    go install github.com/split-route/splitroute@latest
     sudo cp "$(go env GOPATH)/bin/splitroute" /usr/local/bin/
     ```
 
-Source code and issues: [github.com/aliraghebi/splitroute](https://github.com/aliraghebi/splitroute).
+Source code and issues: [github.com/split-route/splitroute](https://github.com/split-route/splitroute).
 
 ## Use
 

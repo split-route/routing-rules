@@ -16,7 +16,7 @@ below to your own config.
 The quickest way is the module, which adds all the rules below on top of your config:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/routing-rules.sgmodule
+https://github.com/split-route/routing-rules/releases/latest/download/routing-rules.sgmodule
 ```
 
 Install it from **Modules** → **Install New Module** with that URL. The rules send sites that block Iranian
@@ -26,15 +26,15 @@ called something else.
 To add the rules by hand instead, put these lines in the `[Rule]` section, above `FINAL`:
 
 ```
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-injected.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/malware.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/phishing.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/cryptominers.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads.list,REJECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/sanctioned.list,PROXY
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-injected.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/malware.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/phishing.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/cryptominers.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/sanctioned.list,PROXY
 DOMAIN-SUFFIX,ir,DIRECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-domains.list,DIRECT
-RULE-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-domains.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr.list,DIRECT
 GEOIP,IR,DIRECT
 FINAL,PROXY
 ```
@@ -46,14 +46,14 @@ Replace `PROXY` with the name of your proxy or policy group.
 Add these lines to the `[Remote Rule]` section:
 
 ```
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-injected.list, policy=REJECT, tag=ir-injected, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/malware.list, policy=REJECT, tag=malware, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/phishing.list, policy=REJECT, tag=phishing, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/cryptominers.list, policy=REJECT, tag=cryptominers, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ads.list, policy=REJECT, tag=ads, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/sanctioned.list, policy=PROXY, tag=sanctioned, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-domains.list, policy=DIRECT, tag=ir-domains, enabled=true
-https://github.com/aliraghebi/routing-rules/releases/latest/download/ir-cidr.list, policy=DIRECT, tag=ir-cidr, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-injected.list, policy=REJECT, tag=ir-injected, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/malware.list, policy=REJECT, tag=malware, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/phishing.list, policy=REJECT, tag=phishing, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/cryptominers.list, policy=REJECT, tag=cryptominers, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ads.list, policy=REJECT, tag=ads, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/sanctioned.list, policy=PROXY, tag=sanctioned, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-domains.list, policy=DIRECT, tag=ir-domains, enabled=true
+https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr.list, policy=DIRECT, tag=ir-cidr, enabled=true
 ```
 
 Then add `DOMAIN-SUFFIX,ir,DIRECT` and `GEOIP,IR,DIRECT` in `[Rule]`, and set `FINAL` to your proxy policy.
@@ -64,7 +64,7 @@ Replace `PROXY` with your policy group's name.
 Surge can load domain lists as `DOMAIN-SET`, which uses less memory than `RULE-SET`:
 
 ```
-DOMAIN-SET,https://github.com/aliraghebi/routing-rules/releases/latest/download/ads-domainset.txt,REJECT
+DOMAIN-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads-domainset.txt,REJECT
 ```
 
 Every domain list has a `-domainset.txt` version; see [File URLs](urls.md#surge-shadowrocket-domain-set).

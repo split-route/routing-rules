@@ -12,7 +12,7 @@ icon: material/cat
 
 `clash.yaml` بخش‌های `rule-providers` و `rules` را با همان ترتیب کانفیگ Shadowrocket دارد:
 
-[:material-download: دانلود clash.yaml](https://github.com/aliraghebi/routing-rules/releases/latest/download/clash.yaml){ .md-button .md-button--primary }
+[:material-download: دانلود clash.yaml](https://github.com/split-route/routing-rules/releases/latest/download/clash.yaml){ .md-button .md-button--primary }
 
 هر دو بخش را با کانفیگ خود ادغام کنید. در Clash Verge Rev می‌توانید آن‌ها را در فایل **Merge** (کانفیگ
 تکمیلی) پروفایل پیست کنید تا اشتراک شما دست‌نخورده بماند. قوانین به یک proxy group با نام **`PROXY`** نیاز
@@ -24,7 +24,7 @@ icon: material/cat
 سیستم resolve می‌شوند (`nameserver-policy`)، و DNS-over-HTTPS از طریق گروه `PROXY` برای بقیه. آن را همراه
 `clash.yaml` ادغام کنید که rule-provider مربوط به `geosite-ir` را تعریف می‌کند.
 
-[:material-download: دانلود clash-dns.yaml](https://github.com/aliraghebi/routing-rules/releases/latest/download/clash-dns.yaml){ .md-button .md-button--primary }
+[:material-download: دانلود clash-dns.yaml](https://github.com/split-route/routing-rules/releases/latest/download/clash-dns.yaml){ .md-button .md-button--primary }
 
 ## یا rule-setها را خودتان اضافه کنید
 
@@ -34,14 +34,14 @@ rule-providers:
     type: http
     behavior: domain
     format: mrs
-    url: https://github.com/aliraghebi/routing-rules/releases/latest/download/geosite-ads.mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.mrs
     path: ./rules/geosite-ads.mrs
     interval: 86400
   geoip-ir:
     type: http
     behavior: ipcidr
     format: mrs
-    url: https://github.com/aliraghebi/routing-rules/releases/latest/download/geoip-ir.mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir.mrs
     path: ./rules/geoip-ir.mrs
     interval: 86400
 

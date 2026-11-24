@@ -1,8 +1,8 @@
 site_name: Routing Rules
 site_description: "Daily-built routing rules and ready-made configs for proxy and VPN clients: direct routing for domestic sites and IP ranges (currently Iran), and blocking of ads, trackers, malware, phishing and cryptominers."
-site_url: https://aliraghebi.github.io/routing-rules/
-repo_url: https://github.com/aliraghebi/routing-rules
-repo_name: aliraghebi/routing-rules
+site_url: https://split-route.github.io/routing-rules/
+repo_url: https://github.com/split-route/routing-rules
+repo_name: split-route/routing-rules
 edit_uri: edit/main/docs/
 copyright: Code GPL-3.0 · Lists keep their upstream licenses · IP geolocation by <a href="https://db-ip.com">DB-IP</a>
 docs_dir: docs
@@ -65,10 +65,10 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/aliraghebi/routing-rules
+      link: https://github.com/split-route/routing-rules
       name: Source on GitHub
     - icon: material/download
-      link: https://github.com/aliraghebi/routing-rules/releases/latest
+      link: https://github.com/split-route/routing-rules/releases/latest
       name: Latest release
 
 extra_css:
