@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "outbound": "block",
+      "name": "🚫 Block",
+      "switch": true,
+      "or": true,
+      "rule_set": [
+        "https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir-injected.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-malware.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geoip-malware.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-phishing.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geoip-phishing.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-cryptominers.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.srs"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "✅ Direct",
+      "switch": true,
+      "or": true,
+      "rule_set": [
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-private.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geoip-private.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ir.srs",
+        "https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir.srs"
+      ]
+    }
+  ]
+}

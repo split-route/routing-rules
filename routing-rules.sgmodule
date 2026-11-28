@@ -1,0 +1,16 @@
+#!name=Routing Rules
+#!desc=Blocks ads, trackers and malware; Iranian sites direct; sites that block Iranian IPs through the proxy. Updated daily.
+
+[Rule]
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-injected.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/private.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/malware.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/phishing.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/cryptominers.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ads.list,REJECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/sanctioned.list,PROXY
+DOMAIN-SUFFIX,ir,DIRECT
+DOMAIN-SUFFIX,xn--mgba3a4f16a,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-domains.list,DIRECT
+RULE-SET,https://github.com/split-route/routing-rules/releases/latest/download/ir-cidr.list,DIRECT
+GEOIP,IR,DIRECT

@@ -1,0 +1,9 @@
+{
+  "dns": {
+    "servers": [
+      "https://1.1.1.1/dns-query",
+      { "address": "localhost", "domains": ["geosite:private", "geosite:ir"], "skipFallback": true }
+    ],
+    "queryStrategy": "UseIP"
+  }
+}

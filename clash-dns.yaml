@@ -1,0 +1,20 @@
+# routing-rules DNS for mihomo (Clash.Meta). Merge together with clash.yaml,
+# which defines the geosite-ir rule-provider. Requires a proxy group named PROXY.
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "rule-set:geosite-private"
+    - "rule-set:geosite-ir"
+    - "+.lan"
+    - "+.local"
+  nameserver:
+    - "https://1.1.1.1/dns-query#PROXY"
+    - "https://8.8.8.8/dns-query#PROXY"
+  nameserver-policy:
+    "rule-set:geosite-private": system
+    "rule-set:geosite-ir": system
+  proxy-server-nameserver:
+    - system

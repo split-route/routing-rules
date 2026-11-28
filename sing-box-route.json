@@ -1,0 +1,105 @@
+{
+  "route": {
+    "rules": [
+      { "action": "sniff" },
+      { "protocol": "dns", "action": "hijack-dns" },
+      { "rule_set": ["geoip-ir-injected"], "action": "reject" },
+      { "rule_set": ["geosite-private", "geoip-private"], "outbound": "direct" },
+      { "ip_is_private": true, "outbound": "direct" },
+      {
+        "rule_set": ["geoip-ir-injected", "geosite-malware", "geoip-malware", "geosite-phishing", "geoip-phishing", "geosite-cryptominers", "geosite-ads"],
+        "action": "reject"
+      },
+      { "rule_set": ["geosite-sanctioned"], "outbound": "proxy" },
+      { "rule_set": ["geosite-ir", "geoip-ir"], "outbound": "direct" }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-private.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geoip-private.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-ir-injected",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir-injected.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-malware.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geoip-malware.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-phishing.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geoip-phishing.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-cryptominers",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-cryptominers.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-ads",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-sanctioned",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-sanctioned.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geosite-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geosite-ir.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "geoip-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir.srs",
+        "download_detour": "proxy"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true
+  }
+}

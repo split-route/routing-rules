@@ -1,0 +1,16 @@
+{
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      { "type": "field", "ip": ["geoip:ir-injected"], "outboundTag": "block" },
+      { "type": "field", "domain": ["geosite:private"], "outboundTag": "direct" },
+      { "type": "field", "ip": ["geoip:private"], "outboundTag": "direct" },
+      { "type": "field", "domain": ["geosite:malware", "geosite:phishing", "geosite:cryptominers", "geosite:ads"], "outboundTag": "block" },
+      { "type": "field", "ip": ["geoip:ir-injected", "geoip:malware", "geoip:phishing"], "outboundTag": "block" },
+      { "type": "field", "domain": ["geosite:sanctioned"], "outboundTag": "proxy" },
+      { "type": "field", "domain": ["geosite:ir"], "outboundTag": "direct" },
+      { "type": "field", "ip": ["geoip:ir"], "outboundTag": "direct" },
+      { "type": "field", "network": "tcp,udp", "outboundTag": "proxy" }
+    ]
+  }
+}

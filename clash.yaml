@@ -1,0 +1,103 @@
+# routing-rules: rules for mihomo (Clash.Meta). Merge into your config.
+# Requires a proxy group named PROXY. Rule-sets refresh daily.
+rule-providers:
+  geosite-private:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-private.mrs
+    path: ./rules/geosite-private.mrs
+    interval: 86400
+  geoip-private:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-private.mrs
+    path: ./rules/geoip-private.mrs
+    interval: 86400
+  geoip-ir-injected:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir-injected.mrs
+    path: ./rules/geoip-ir-injected.mrs
+    interval: 86400
+  geosite-malware:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-malware.mrs
+    path: ./rules/geosite-malware.mrs
+    interval: 86400
+  geoip-malware:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-malware.mrs
+    path: ./rules/geoip-malware.mrs
+    interval: 86400
+  geosite-phishing:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-phishing.mrs
+    path: ./rules/geosite-phishing.mrs
+    interval: 86400
+  geoip-phishing:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-phishing.mrs
+    path: ./rules/geoip-phishing.mrs
+    interval: 86400
+  geosite-cryptominers:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-cryptominers.mrs
+    path: ./rules/geosite-cryptominers.mrs
+    interval: 86400
+  geosite-ads:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-ads.mrs
+    path: ./rules/geosite-ads.mrs
+    interval: 86400
+  geosite-sanctioned:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-sanctioned.mrs
+    path: ./rules/geosite-sanctioned.mrs
+    interval: 86400
+  geosite-ir:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geosite-ir.mrs
+    path: ./rules/geosite-ir.mrs
+    interval: 86400
+  geoip-ir:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/split-route/routing-rules/releases/latest/download/geoip-ir.mrs
+    path: ./rules/geoip-ir.mrs
+    interval: 86400
+
+rules:
+  - RULE-SET,geoip-ir-injected,REJECT,no-resolve
+  - RULE-SET,geosite-private,DIRECT
+  - RULE-SET,geoip-private,DIRECT,no-resolve
+  - RULE-SET,geoip-ir-injected,REJECT,no-resolve
+  - RULE-SET,geosite-malware,REJECT
+  - RULE-SET,geoip-malware,REJECT,no-resolve
+  - RULE-SET,geosite-phishing,REJECT
+  - RULE-SET,geoip-phishing,REJECT,no-resolve
+  - RULE-SET,geosite-cryptominers,REJECT
+  - RULE-SET,geosite-ads,REJECT
+  - RULE-SET,geosite-sanctioned,PROXY
+  - RULE-SET,geosite-ir,DIRECT
+  - RULE-SET,geoip-ir,DIRECT
+  - MATCH,PROXY

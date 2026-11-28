@@ -1,0 +1,77 @@
+[
+  {
+    "remarks": "DNS block-page IPs - block",
+    "outboundTag": "block",
+    "ip": [
+      "geoip:ir-injected"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Local names (lan, local, localhost, routers) - direct",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Private IPs - direct",
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Ads, malware, phishing, cryptominers - block",
+    "outboundTag": "block",
+    "domain": [
+      "geosite:malware",
+      "geosite:phishing",
+      "geosite:cryptominers",
+      "geosite:ads"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Malicious IPs - block",
+    "outboundTag": "block",
+    "ip": [
+      "geoip:ir-injected",
+      "geoip:malware",
+      "geoip:phishing"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Sites that block Iranian IPs - proxy",
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:sanctioned"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Iranian domains - direct",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:ir"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Iranian IPs - direct",
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:ir"
+    ],
+    "enabled": true
+  },
+  {
+    "remarks": "Everything else - proxy",
+    "outboundTag": "proxy",
+    "port": "0-65535",
+    "enabled": true
+  }
+]

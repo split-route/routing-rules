@@ -1,0 +1,5 @@
+# NAME: ir-injected
+# TOTAL: 3
+IP-CIDR,10.10.34.0/24,no-resolve
+IP-CIDR6,2001:4188:2:600:10:10:34:34/127,no-resolve
+IP-CIDR6,2001:4188:2:600:10:10:34:36/128,no-resolve

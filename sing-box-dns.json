@@ -1,0 +1,15 @@
+{
+  "route": {
+    "default_domain_resolver": "local"
+  },
+  "dns": {
+    "servers": [
+      { "type": "https", "tag": "remote", "server": "1.1.1.1", "detour": "proxy" },
+      { "type": "local", "tag": "local" }
+    ],
+    "rules": [
+      { "rule_set": ["geosite-private", "geosite-ir"], "server": "local" }
+    ],
+    "final": "remote"
+  }
+}
